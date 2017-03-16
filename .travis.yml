@@ -1,0 +1,20 @@
+sudo: required
+
+language: node_js
+
+python:
+  - "2.7"
+
+node_js:
+  - "4.2.6"
+
+install: sudo pip install --upgrade pip
+
+script: echo
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: scripts/deploy.sh
+  on:
+    branch: master
